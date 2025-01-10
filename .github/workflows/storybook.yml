@@ -1,0 +1,27 @@
+name: Chromatic Visual Testing
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  chromatic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Chromatic
+        uses: chromaui/action@v2
+        with:
+          projectToken: secrets.CHROMATIC_TOKEN
+        env:
+          CHROMATIC_TOKEN: secrets.CHROMATIC_TOKEN
