@@ -19,6 +19,13 @@ jobs:
       - name: Set up pnpm
         run: npm install -g pnpm  # Install pnpm globally
 
+      - name: Verify pnpm installation
+        run: pnpm --version  # Check if pnpm is correctly installed
+
+      - name: List scripts in package.json
+        run: cat package.json | jq '.scripts' # This will output the scripts section of your package.json so you can verify that build-storybook is there
+
+
       - name: Install dependencies
         run: pnpm install
       
