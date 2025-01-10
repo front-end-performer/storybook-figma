@@ -14,13 +14,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@latest
+        uses: actions/checkout@checkout@v3
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Run Chromatic
-        uses: chromaui/action@latest
+        uses: chromaui/action@v1
         with:
           projectToken: secrets.CHROMATIC_TOKEN
         env:
