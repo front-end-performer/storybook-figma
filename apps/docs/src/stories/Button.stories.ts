@@ -13,7 +13,7 @@ const meta = {
     design: {
       type: "figspec", // Set the design tool to Figma
       url: "https://www.figma.com/design/hdnqWI05SUcNYDjyjkkWYS/Untitled?node-id=1-19&t=D2VyOdk1XS1JJIy7-4", // Replace with your Figma URL
-      accessToken: process.env.FIGMA_ACCESS_TOKEN,
+      accessToken: process.env.FIGMA_ACCESS_TOKEN || "",
     },
     // design: {
     //   type: "figma", // Set the design tool to Figma
