@@ -37,6 +37,6 @@ jobs:
       - name: Run Chromatic
         uses: chromaui/action@v1
         with:
-          projectToken: secrets.CHROMATIC_TOKEN
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
         env:
-          CHROMATIC_TOKEN: secrets.CHROMATIC_TOKEN
+          CHROMATIC_TOKEN: ${{ secrets.CHROMATIC_TOKEN }}
