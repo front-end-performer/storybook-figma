@@ -30,7 +30,9 @@ jobs:
         run: pnpm install
       
       - name: Build Storybook
-        run: pnpm run build-storybook  # Run the build-storybook script
+        run: |
+          cd apps/docs
+          pnpm run build-storybook  # This will now use the script inside apps/docs
 
       - name: Run Chromatic
         uses: chromaui/action@v1
